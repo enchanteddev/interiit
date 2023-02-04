@@ -1,0 +1,35 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.linkbutton{
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+    border: 1px solid black;
+    padding: 1em;
+    display: grid;
+    place-items: center;
+}
+
+.heading{
+    font-size: 60px;
+}
+
+.sioptions > *{
+    margin-right: 1em;
+}
+
+.input{
+    font-size: 30px;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
