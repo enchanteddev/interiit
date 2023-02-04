@@ -42,7 +42,7 @@ function Mentee({user}){
     const setNewInterest = () => {
         fetch('https://someapi', {
           method: 'POST',
-          body: interests,
+          body: JSON.stringify(interests),
         })
           .then(response => response.json())
           .then(success => {
@@ -55,7 +55,7 @@ function Mentee({user}){
         setMentors([{id: 2,name: "Rohan", isMentor: true}, {id: 3,name: "John", isMentor: true}, {id: 4,name: "Kross", isMentor: true}])
         fetch('https://someapi', {
           method: 'POST',
-          body: interests,
+          body: JSON.stringify(interests),
         })
           .then(response => response.json())
           .then(success => {
@@ -128,7 +128,7 @@ function Mentor({user}){
     function saveMentorSkills() {
         fetch('https://someapi', {
           method: 'POST',
-          body: skills,
+          body: JSON.stringify(skills),
         })
           .then(response => response.json())
           .then(success => {
