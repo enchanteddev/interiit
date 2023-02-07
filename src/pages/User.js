@@ -4,11 +4,16 @@ import 'react-list-editable/lib/react-list-editable.css';
 
 import style from '../styles/User.module.css'
 
-export default function User({user}){
+export default function User({user, setUser}){
     return(
         <div className={style.main}>
+          <div className="left">
             <div className={style.name}>{user.name}</div>
             <div className={style.usertype}>{user.isMentor ? "Mentor" : "Mentee"} Account</div>
+          </div>
+          <div className={style.right}>
+            <button onClick={() => {localStorage.removeItem('mytoken'); setUser(undefined)}}>Sign Out</button>
+          </div>
             <hr />
             {user.isMentor ? <Mentor user={user}/> : <Mentee user={user}/>}
         </div>

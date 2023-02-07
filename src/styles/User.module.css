@@ -5,6 +5,7 @@
     margin-left: 10%;
     min-height: 80vh;
     padding: 1em;
+    position: relative;
 }
 
 .name{
@@ -71,4 +72,10 @@
     width: 25ch;
     display: grid;
     place-items: center;
+}
+
+.right{
+    position: absolute;
+    right: 1.6em;
+    top: 1em;
 }
